@@ -21,7 +21,7 @@ def create_app(test_config=None):
         app.config.from_mapping(test_config)
 
     # ensure the instance folder exists
-    try:1
+    try:
         os.makedirs(app.instance_path)
     except OSError:
         pass
@@ -41,5 +41,3 @@ def create_app(test_config=None):
     app.add_url_rule('/', endpoint='index')
 
     return app
-
-# Stoped at https://flask.palletsprojects.com/en/2.3.x/tutorial/install/
